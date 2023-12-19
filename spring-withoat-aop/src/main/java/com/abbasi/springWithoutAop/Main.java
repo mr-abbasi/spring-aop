@@ -1,8 +1,8 @@
-package com.abbasi.springWithoutAOP;
+package com.abbasi.springWithoutAop;
 
-import com.abbasi.springWithoutAOP.config.ProjectConfig;
-import com.abbasi.springWithoutAOP.model.Song;
-import com.abbasi.springWithoutAOP.service.VehicleService;
+import com.abbasi.springWithoutAop.config.ProjectConfig;
+import com.abbasi.springWithoutAop.model.Song;
+import com.abbasi.springWithoutAop.service.VehicleService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {

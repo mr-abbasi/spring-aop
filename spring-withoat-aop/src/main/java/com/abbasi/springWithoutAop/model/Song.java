@@ -1,4 +1,4 @@
-package com.abbasi.springWithoutAOP.model;
+package com.abbasi.springWithoutAop.model;
 
 public class Song {
     private String title;

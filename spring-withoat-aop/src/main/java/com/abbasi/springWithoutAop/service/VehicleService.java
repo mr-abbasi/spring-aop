@@ -1,8 +1,8 @@
-package com.abbasi.springWithoutAOP.service;
+package com.abbasi.springWithoutAop.service;
 
-import com.abbasi.springWithoutAOP.model.Song;
-import com.abbasi.springWithoutAOP.model.Speaker;
-import com.abbasi.springWithoutAOP.model.Tyre;
+import com.abbasi.springWithoutAop.model.Song;
+import com.abbasi.springWithoutAop.model.Speaker;
+import com.abbasi.springWithoutAop.model.Tyre;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
