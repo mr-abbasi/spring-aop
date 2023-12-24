@@ -4,7 +4,6 @@ import com.abbasi.springAopAround.model.Song;
 import com.abbasi.springAopAround.model.Speaker;
 import com.abbasi.springAopAround.model.Tyre;
 import org.springframework.stereotype.Component;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @Component
@@ -20,35 +19,14 @@ public class VehicleService {
     }
 
     public String playMusic(boolean vehicleStarted, Song song) {
-        String music = null;
-        if (vehicleStarted) {
-            music = speaker.makeSound(song);
-        } else {
-            logger.log(Level.SEVERE, "Vehicle not started to perform the operation");
-        }
-
-        return music;
+        return speaker.makeSound(song);
     }
 
     public String moveVehicle(boolean vehicleStarted) {
-        String status = null;
-        if (vehicleStarted) {
-            status = tyre.rotate();
-        } else {
-            logger.log(Level.SEVERE, "Vehicle not started to perform the operation");
-        }
-
-        return status;
+        return tyre.rotate();
     }
 
     public String applyBrake(boolean vehicleStarted) {
-        String status = null;
-        if (vehicleStarted) {
-            status = tyre.stop();
-        } else {
-            logger.log(Level.SEVERE, "Vehicle not started to perform the operation");
-        }
-
-        return status;
+        return tyre.stop();
     }
 }
