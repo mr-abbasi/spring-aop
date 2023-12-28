@@ -1,5 +1,6 @@
 package com.abbasi.springAopAround.service;
 
+import com.abbasi.springAopAround.interfaces.LogAnnotation;
 import com.abbasi.springAopAround.model.Song;
 import com.abbasi.springAopAround.model.Speaker;
 import com.abbasi.springAopAround.model.Tyre;
@@ -15,6 +16,7 @@ public class VehicleService {
         this.tyre = tyre;
     }
 
+    @LogAnnotation
     public String playMusic(boolean vehicleStarted, Song song) {
 //        throw new NullPointerException("Null Pointer Exception");
         return speaker.makeSound(song);

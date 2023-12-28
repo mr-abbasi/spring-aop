@@ -27,4 +27,16 @@ public class LoggerAspect {
         logger.info("Time took to execute the" + joinPoint.getSignature() + " method: " + timeElapsed +" MilliSecond");
         return result;
     }
+
+    @Around("@annotation(com.abbasi.springAopAround.interfaces.LogAnnotation)")
+    public Object anotherTimeLogger(ProceedingJoinPoint joinPoint) throws Throwable{
+        Instant start = Instant.now();
+        logger.info(joinPoint.getSignature().toShortString() + " method execution start this log is from annotation");
+        var result =joinPoint.proceed();
+        logger.info(joinPoint.getSignature() + " method execution end this log is from annotation ");
+        Instant finish = Instant.now();
+        long timeElapsed = Duration.between(start, finish).toMillis();
+        logger.info("Time took to execute the" + joinPoint.getSignature() + " method: " + timeElapsed +" MilliSecond this log is from annotation");
+        return result;
+    }
 }

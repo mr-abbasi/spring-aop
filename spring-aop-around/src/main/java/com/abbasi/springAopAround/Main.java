@@ -17,8 +17,8 @@ public class Main {
         String playMusicStatus = vehicleService.playMusic(vehicleStarted, song);
         String moveStatus = vehicleService.moveVehicle(vehicleStarted);
         String applyBrakeStatus = vehicleService.applyBrake(vehicleStarted);
-//        System.out.println(playMusicStatus);
-//        System.out.println(moveStatus);
-//        System.out.println(applyBrakeStatus);
+        System.out.println(playMusicStatus);
+        System.out.println(moveStatus);
+        System.out.println(applyBrakeStatus);
     }
 }
