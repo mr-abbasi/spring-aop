@@ -4,12 +4,9 @@ import com.abbasi.springAopAround.model.Song;
 import com.abbasi.springAopAround.model.Speaker;
 import com.abbasi.springAopAround.model.Tyre;
 import org.springframework.stereotype.Component;
-import java.util.logging.Logger;
 
 @Component
 public class VehicleService {
-
-    private final Logger logger = Logger.getLogger(VehicleService.class.getName());
     private final Speaker speaker;
     private final Tyre tyre;
 
@@ -19,6 +16,7 @@ public class VehicleService {
     }
 
     public String playMusic(boolean vehicleStarted, Song song) {
+//        throw new NullPointerException("Null Pointer Exception");
         return speaker.makeSound(song);
     }
 
